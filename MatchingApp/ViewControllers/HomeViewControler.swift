@@ -6,16 +6,16 @@ class HomeViewControler: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        let view1 = UIView()
-        view1.backgroundColor = .yellow
+        let view1 = TopControlView()
+        view1.backgroundColor = .white
         
         let view2 = UIView()
         view2.backgroundColor = .blue
         
-        let view3 = BottomControlView()
-        view3.backgroundColor = .green
+        let bottomControlView = BottomControlView()
+        //view3.backgroundColor = .green
         
-        let stackView = UIStackView(arrangedSubviews: [view1, view2, view3])
+        let stackView = UIStackView(arrangedSubviews: [view1, view2, bottomControlView])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         //stackView.distribution = .fillEqually
@@ -24,14 +24,13 @@ class HomeViewControler: UIViewController {
         
         [
             view1.heightAnchor.constraint(equalToConstant: 100),
-            view3.heightAnchor.constraint(equalToConstant: 100),
+            bottomControlView.heightAnchor.constraint(equalToConstant: 100),
             
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             stackView.leftAnchor.constraint(equalTo: view.leftAnchor),
             stackView.rightAnchor.constraint(equalTo: view.rightAnchor)]
             .forEach { $0.isActive = true }
-        
     }
     
 
