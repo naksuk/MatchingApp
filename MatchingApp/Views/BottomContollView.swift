@@ -52,12 +52,14 @@ class BottomButtonView: UIView {
         
         addSubview(button!)
         
-        [
-        button?.centerYAnchor.constraint(equalTo: centerYAnchor),
-        button?.centerXAnchor.constraint(equalTo: centerXAnchor),
-        button?.widthAnchor.constraint(equalToConstant: width),
-        button?.heightAnchor.constraint(equalToConstant: width)
-        ].forEach { $0?.isActive = true}
+        button?.anchor(centerY: centerYAnchor, centerX: centerXAnchor, width: width, height: width)
+        
+//        [
+//        button?.centerYAnchor.constraint(equalTo: centerYAnchor),
+//        button?.centerXAnchor.constraint(equalTo: centerXAnchor),
+//        button?.widthAnchor.constraint(equalToConstant: width),
+//        button?.heightAnchor.constraint(equalToConstant: width)
+//        ].forEach { $0?.isActive = true}
         
         
     }

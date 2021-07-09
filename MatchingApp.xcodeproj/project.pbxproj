@@ -18,6 +18,7 @@
 		026165942697ADDA0077C244 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 026165932697ADDA0077C244 /* RxSwift */; };
 		026165962697ADDA0077C244 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 026165952697ADDA0077C244 /* RxCocoa */; };
 		026165982697ADDA0077C244 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 026165972697ADDA0077C244 /* RxRelay */; };
+		0261659A2697BC5B0077C244 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026165992697BC5B0077C244 /* UIView-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		0261658B269500BC0077C244 /* BottomContollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomContollView.swift; sourceTree = "<group>"; };
 		0261658D2696A6B40077C244 /* UIImage-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
 		026165902697A1C40077C244 /* TopControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopControlView.swift; sourceTree = "<group>"; };
+		026165992697BC5B0077C244 /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				0261658D2696A6B40077C244 /* UIImage-Extension.swift */,
+				026165992697BC5B0077C244 /* UIView-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				026165912697A1C40077C244 /* TopControlView.swift in Sources */,
 				0261657A269451870077C244 /* HomeViewControler.swift in Sources */,
 				02616576269451870077C244 /* AppDelegate.swift in Sources */,
+				0261659A2697BC5B0077C244 /* UIView-Extension.swift in Sources */,
 				0261658C269500BC0077C244 /* BottomContollView.swift in Sources */,
 				02616578269451870077C244 /* SceneDelegate.swift in Sources */,
 				0261658E2696A6B50077C244 /* UIImage-Extension.swift in Sources */,
