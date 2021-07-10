@@ -19,6 +19,8 @@
 		026165962697ADDA0077C244 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 026165952697ADDA0077C244 /* RxCocoa */; };
 		026165982697ADDA0077C244 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 026165972697ADDA0077C244 /* RxRelay */; };
 		0261659A2697BC5B0077C244 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026165992697BC5B0077C244 /* UIView-Extension.swift */; };
+		0261659C269824C20077C244 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261659B269824C20077C244 /* CardView.swift */; };
+		0261659E269974CA0077C244 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261659D269974CA0077C244 /* UIColor-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		0261658D2696A6B40077C244 /* UIImage-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
 		026165902697A1C40077C244 /* TopControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopControlView.swift; sourceTree = "<group>"; };
 		026165992697BC5B0077C244 /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
+		0261659B269824C20077C244 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0261659D269974CA0077C244 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			children = (
 				0261658B269500BC0077C244 /* BottomContollView.swift */,
 				026165902697A1C40077C244 /* TopControlView.swift */,
+				0261659B269824C20077C244 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			children = (
 				0261658D2696A6B40077C244 /* UIImage-Extension.swift */,
 				026165992697BC5B0077C244 /* UIView-Extension.swift */,
+				0261659D269974CA0077C244 /* UIColor-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -187,8 +193,10 @@
 				0261657A269451870077C244 /* HomeViewControler.swift in Sources */,
 				02616576269451870077C244 /* AppDelegate.swift in Sources */,
 				0261659A2697BC5B0077C244 /* UIView-Extension.swift in Sources */,
+				0261659E269974CA0077C244 /* UIColor-Extension.swift in Sources */,
 				0261658C269500BC0077C244 /* BottomContollView.swift in Sources */,
 				02616578269451870077C244 /* SceneDelegate.swift in Sources */,
+				0261659C269824C20077C244 /* CardView.swift in Sources */,
 				0261658E2696A6B50077C244 /* UIImage-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
