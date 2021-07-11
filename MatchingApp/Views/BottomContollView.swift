@@ -60,7 +60,7 @@ class BottomButtonView: UIView {
 //        button?.widthAnchor.constraint(equalToConstant: width),
 //        button?.heightAnchor.constraint(equalToConstant: width)
 //        ].forEach { $0?.isActive = true}
-        
+    
         
     }
     
