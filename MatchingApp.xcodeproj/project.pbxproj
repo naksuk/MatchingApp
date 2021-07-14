@@ -119,7 +119,7 @@
 				0261657E2694518B0077C244 /* Assets.xcassets */,
 				026165802694518B0077C244 /* LaunchScreen.storyboard */,
 				026165832694518B0077C244 /* Info.plist */,
-				02057A9B269E391800F66115 /* GoogleService-Info.plist */,
+				02E816C6269F206C00B4096C /* GoogleService-Info-DEVELOP */,
 			);
 			path = MatchingApp;
 			sourceTree = "<group>";
@@ -151,6 +151,14 @@
 				02057A93269BA3F900F66115 /* UIButton-Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		02E816C6269F206C00B4096C /* GoogleService-Info-DEVELOP */ = {
+			isa = PBXGroup;
+			children = (
+				02057A9B269E391800F66115 /* GoogleService-Info.plist */,
+			);
+			path = "GoogleService-Info-DEVELOP";
 			sourceTree = "<group>";
 		};
 		634FD2BAABCF1A396812DFD2 /* Frameworks */ = {
