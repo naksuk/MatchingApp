@@ -27,6 +27,8 @@
 		0261659A2697BC5B0077C244 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026165992697BC5B0077C244 /* UIView-Extension.swift */; };
 		0261659C269824C20077C244 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261659B269824C20077C244 /* CardView.swift */; };
 		0261659E269974CA0077C244 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261659D269974CA0077C244 /* UIColor-Extension.swift */; };
+		02E816C8269F8CFF00B4096C /* RegisterTiitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E816C7269F8CFF00B4096C /* RegisterTiitleLabel.swift */; };
+		02E816CA269F90A800B4096C /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E816C9269F90A800B4096C /* RegisterButton.swift */; };
 		75FEE4A099631517B0880A72 /* Pods_MatchingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E44C86EC0F5297D100EEC2 /* Pods_MatchingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		026165992697BC5B0077C244 /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
 		0261659B269824C20077C244 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0261659D269974CA0077C244 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		02E816C7269F8CFF00B4096C /* RegisterTiitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTiitleLabel.swift; sourceTree = "<group>"; };
+		02E816C9269F90A800B4096C /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
 		3B609726388FA75ECCAE6779 /* Pods-MatchingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.debug.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		89AC47533C2837177932C020 /* Pods-MatchingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.release.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.release.xcconfig"; sourceTree = "<group>"; };
 		F5E44C86EC0F5297D100EEC2 /* Pods_MatchingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				02057AA1269E40F500F66115 /* RegisterTextField.swift */,
+				02E816C7269F8CFF00B4096C /* RegisterTiitleLabel.swift */,
+				02E816C9269F90A800B4096C /* RegisterButton.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -300,10 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E816CA269F90A800B4096C /* RegisterButton.swift in Sources */,
 				026165912697A1C40077C244 /* TopControlView.swift in Sources */,
 				0261657A269451870077C244 /* HomeViewController.swift in Sources */,
 				02057A92269B9A1F00F66115 /* CardInfoLabel.swift in Sources */,
 				02616576269451870077C244 /* AppDelegate.swift in Sources */,
+				02E816C8269F8CFF00B4096C /* RegisterTiitleLabel.swift in Sources */,
 				0261659A2697BC5B0077C244 /* UIView-Extension.swift in Sources */,
 				0261659E269974CA0077C244 /* UIColor-Extension.swift in Sources */,
 				02057A94269BA3F900F66115 /* UIButton-Extension.swift in Sources */,
