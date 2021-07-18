@@ -30,6 +30,7 @@
 		02E816C8269F8CFF00B4096C /* RegisterTiitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E816C7269F8CFF00B4096C /* RegisterTiitleLabel.swift */; };
 		02E816CA269F90A800B4096C /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E816C9269F90A800B4096C /* RegisterButton.swift */; };
 		02E8171D26A0E1F600B4096C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8171C26A0E1F600B4096C /* RegisterViewModel.swift */; };
+		02E8172326A45FCF00B4096C /* Firebase-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8172226A45FCF00B4096C /* Firebase-Extension.swift */; };
 		75FEE4A099631517B0880A72 /* Pods_MatchingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E44C86EC0F5297D100EEC2 /* Pods_MatchingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		02E816C7269F8CFF00B4096C /* RegisterTiitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTiitleLabel.swift; sourceTree = "<group>"; };
 		02E816C9269F90A800B4096C /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
 		02E8171C26A0E1F600B4096C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		02E8172226A45FCF00B4096C /* Firebase-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase-Extension.swift"; sourceTree = "<group>"; };
 		3B609726388FA75ECCAE6779 /* Pods-MatchingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.debug.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		89AC47533C2837177932C020 /* Pods-MatchingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.release.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.release.xcconfig"; sourceTree = "<group>"; };
 		F5E44C86EC0F5297D100EEC2 /* Pods_MatchingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,12 +124,12 @@
 				02E8171B26A0E1DA00B4096C /* ViewModels */,
 				026165892695006A0077C244 /* ViewControllers */,
 				0261658A269500950077C244 /* Views */,
+				0261658F2696A6C40077C244 /* Extensions */,
 				02616575269451870077C244 /* AppDelegate.swift */,
 				02616577269451870077C244 /* SceneDelegate.swift */,
 				0261657E2694518B0077C244 /* Assets.xcassets */,
 				026165802694518B0077C244 /* LaunchScreen.storyboard */,
 				026165832694518B0077C244 /* Info.plist */,
-				0261658F2696A6C40077C244 /* Extensions */,
 				02E816C6269F206C00B4096C /* GoogleService-Info-DEVELOP */,
 			);
 			path = MatchingApp;
@@ -158,6 +160,7 @@
 				026165992697BC5B0077C244 /* UIView-Extension.swift */,
 				0261659D269974CA0077C244 /* UIColor-Extension.swift */,
 				02057A93269BA3F900F66115 /* UIButton-Extension.swift */,
+				02E8172226A45FCF00B4096C /* Firebase-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				02E816C8269F8CFF00B4096C /* RegisterTiitleLabel.swift in Sources */,
 				0261659A2697BC5B0077C244 /* UIView-Extension.swift in Sources */,
 				0261659E269974CA0077C244 /* UIColor-Extension.swift in Sources */,
+				02E8172326A45FCF00B4096C /* Firebase-Extension.swift in Sources */,
 				02057A94269BA3F900F66115 /* UIButton-Extension.swift in Sources */,
 				02E8171D26A0E1F600B4096C /* RegisterViewModel.swift in Sources */,
 				0261658C269500BC0077C244 /* BottomContollView.swift in Sources */,

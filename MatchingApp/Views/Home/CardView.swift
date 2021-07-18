@@ -6,11 +6,11 @@ class CardView: UIView {
     
     //MARK: UIViews
     private let cardImageView = CardImageView(frame: .zero)
-    private let nameLabel: UILabel = CardInfoLabel(text: "Taro, 22", font: .systemFont(ofSize: 40, weight: .heavy))
+    private let nameLabel: UILabel = CardInfoLabel(text: "Minami, 22", font: .systemFont(ofSize: 40, weight: .heavy))
     private let infoButton = UIButton(type: .system).createCardInfoButton()
-    private let residenceLabel = CardInfoLabel(text: "日本、大阪", font: .systemFont(ofSize: 20, weight: .regular))
+    private let residenceLabel = CardInfoLabel(text: "日本、東京", font: .systemFont(ofSize: 20, weight: .regular))
     private let hobbyLabel = CardInfoLabel(text: "ランニング", font: .systemFont(ofSize: 25, weight: .regular))
-    private let introductionLabel = CardInfoLabel(text: "走り回るのが大好きです", font: .systemFont(ofSize: 25, weight: .regular))
+    private let introductionLabel = CardInfoLabel(text: "刺身が好きです", font: .systemFont(ofSize: 25, weight: .regular))
     private let goodLabel: UILabel = CardInfoLabel(text: "GOOD", textColor: .rgb(red: 137, green: 223, blue: 86))
     private let nopeLabel: UILabel = CardInfoLabel(text: "NOPE", textColor: .rgb(red: 222, green: 110, blue: 110))
     
