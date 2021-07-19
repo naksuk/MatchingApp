@@ -31,6 +31,7 @@
 		02E816CA269F90A800B4096C /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E816C9269F90A800B4096C /* RegisterButton.swift */; };
 		02E8171D26A0E1F600B4096C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8171C26A0E1F600B4096C /* RegisterViewModel.swift */; };
 		02E8172326A45FCF00B4096C /* Firebase-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8172226A45FCF00B4096C /* Firebase-Extension.swift */; };
+		02E8172526A59CD300B4096C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8172426A59CD300B4096C /* LoginViewController.swift */; };
 		75FEE4A099631517B0880A72 /* Pods_MatchingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E44C86EC0F5297D100EEC2 /* Pods_MatchingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		02E816C9269F90A800B4096C /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
 		02E8171C26A0E1F600B4096C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		02E8172226A45FCF00B4096C /* Firebase-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase-Extension.swift"; sourceTree = "<group>"; };
+		02E8172426A59CD300B4096C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3B609726388FA75ECCAE6779 /* Pods-MatchingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.debug.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		89AC47533C2837177932C020 /* Pods-MatchingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.release.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.release.xcconfig"; sourceTree = "<group>"; };
 		F5E44C86EC0F5297D100EEC2 /* Pods_MatchingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,10 +123,10 @@
 		02616574269451870077C244 /* MatchingApp */ = {
 			isa = PBXGroup;
 			children = (
+				0261658F2696A6C40077C244 /* Extensions */,
+				0261658A269500950077C244 /* Views */,
 				02E8171B26A0E1DA00B4096C /* ViewModels */,
 				026165892695006A0077C244 /* ViewControllers */,
-				0261658A269500950077C244 /* Views */,
-				0261658F2696A6C40077C244 /* Extensions */,
 				02616575269451870077C244 /* AppDelegate.swift */,
 				02616577269451870077C244 /* SceneDelegate.swift */,
 				0261657E2694518B0077C244 /* Assets.xcassets */,
@@ -140,6 +142,7 @@
 			children = (
 				02616579269451870077C244 /* HomeViewController.swift */,
 				02057A9D269E3B0A00F66115 /* RegisterViewController.swift */,
+				02E8172426A59CD300B4096C /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				026165912697A1C40077C244 /* TopControlView.swift in Sources */,
 				0261657A269451870077C244 /* HomeViewController.swift in Sources */,
 				02057A92269B9A1F00F66115 /* CardInfoLabel.swift in Sources */,
+				02E8172526A59CD300B4096C /* LoginViewController.swift in Sources */,
 				02616576269451870077C244 /* AppDelegate.swift in Sources */,
 				02E816C8269F8CFF00B4096C /* RegisterTiitleLabel.swift in Sources */,
 				0261659A2697BC5B0077C244 /* UIView-Extension.swift in Sources */,
