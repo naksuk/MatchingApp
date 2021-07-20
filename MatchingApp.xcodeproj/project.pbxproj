@@ -32,6 +32,8 @@
 		02E8171D26A0E1F600B4096C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8171C26A0E1F600B4096C /* RegisterViewModel.swift */; };
 		02E8172326A45FCF00B4096C /* Firebase-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8172226A45FCF00B4096C /* Firebase-Extension.swift */; };
 		02E8172526A59CD300B4096C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8172426A59CD300B4096C /* LoginViewController.swift */; };
+		02E8172826A6EAD800B4096C /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 02E8172726A6EAD800B4096C /* PKHUD */; };
+		02E8172B26A6F17000B4096C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8172A26A6F17000B4096C /* User.swift */; };
 		75FEE4A099631517B0880A72 /* Pods_MatchingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E44C86EC0F5297D100EEC2 /* Pods_MatchingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,7 @@
 		02E8171C26A0E1F600B4096C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		02E8172226A45FCF00B4096C /* Firebase-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase-Extension.swift"; sourceTree = "<group>"; };
 		02E8172426A59CD300B4096C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		02E8172A26A6F17000B4096C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3B609726388FA75ECCAE6779 /* Pods-MatchingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.debug.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		89AC47533C2837177932C020 /* Pods-MatchingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchingApp.release.xcconfig"; path = "Target Support Files/Pods-MatchingApp/Pods-MatchingApp.release.xcconfig"; sourceTree = "<group>"; };
 		F5E44C86EC0F5297D100EEC2 /* Pods_MatchingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +76,7 @@
 				026165982697ADDA0077C244 /* RxRelay in Frameworks */,
 				026165962697ADDA0077C244 /* RxCocoa in Frameworks */,
 				026165942697ADDA0077C244 /* RxSwift in Frameworks */,
+				02E8172826A6EAD800B4096C /* PKHUD in Frameworks */,
 				75FEE4A099631517B0880A72 /* Pods_MatchingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +127,7 @@
 		02616574269451870077C244 /* MatchingApp */ = {
 			isa = PBXGroup;
 			children = (
+				02E8172926A6F15600B4096C /* Models */,
 				0261658F2696A6C40077C244 /* Extensions */,
 				0261658A269500950077C244 /* Views */,
 				02E8171B26A0E1DA00B4096C /* ViewModels */,
@@ -184,6 +189,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		02E8172926A6F15600B4096C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				02E8172A26A6F17000B4096C /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		634FD2BAABCF1A396812DFD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +236,7 @@
 				026165932697ADDA0077C244 /* RxSwift */,
 				026165952697ADDA0077C244 /* RxCocoa */,
 				026165972697ADDA0077C244 /* RxRelay */,
+				02E8172726A6EAD800B4096C /* PKHUD */,
 			);
 			productName = MatchingApp;
 			productReference = 02616572269451870077C244 /* MatchingApp.app */;
@@ -253,6 +267,7 @@
 			mainGroup = 02616569269451870077C244;
 			packageReferences = (
 				026165922697ADDA0077C244 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				02E8172626A6EAD800B4096C /* XCRemoteSwiftPackageReference "PKHUD" */,
 			);
 			productRefGroup = 02616573269451870077C244 /* Products */;
 			projectDirPath = "";
@@ -331,6 +346,7 @@
 				02616576269451870077C244 /* AppDelegate.swift in Sources */,
 				02E816C8269F8CFF00B4096C /* RegisterTiitleLabel.swift in Sources */,
 				0261659A2697BC5B0077C244 /* UIView-Extension.swift in Sources */,
+				02E8172B26A6F17000B4096C /* User.swift in Sources */,
 				0261659E269974CA0077C244 /* UIColor-Extension.swift in Sources */,
 				02E8172326A45FCF00B4096C /* Firebase-Extension.swift in Sources */,
 				02057A94269BA3F900F66115 /* UIButton-Extension.swift in Sources */,
@@ -547,6 +563,14 @@
 				version = 6.0.0;
 			};
 		};
+		02E8172626A6EAD800B4096C /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -564,6 +588,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 026165922697ADDA0077C244 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
+		};
+		02E8172726A6EAD800B4096C /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02E8172626A6EAD800B4096C /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,7 +1,11 @@
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class HomeViewController: UIViewController {
+    
+    
+    private var user: User?
     
     let logoutButton: UIButton = {
         let button = UIButton(type: .system)
@@ -9,6 +13,7 @@ class HomeViewController: UIViewController {
         return button
     }()
     
+    // MARK: LifeCycleMethods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +28,17 @@ class HomeViewController: UIViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Firestore.fetchUserFromFirestore(uid: uid) { (user) in
+            if let user = user {
+                self.user = user
+            }
+            
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -33,6 +49,9 @@ class HomeViewController: UIViewController {
             self.present(nav, animated: true, completion: nil)
         }
     }
+    
+    // MARK: Methods
+
     
     private func setupLayout() {
         
