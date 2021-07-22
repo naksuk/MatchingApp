@@ -15,9 +15,10 @@ class CardView: UIView {
     private let nopeLabel: UILabel = CardInfoLabel(text: "NOPE", textColor: .rgb(red: 222, green: 110, blue: 110))
     
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setUpLayout()
+    init(user: User) {
+        super.init(frame: .zero)
+        
+        setUpLayout(user: user)
         setupGradientLayer()
         
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panCardView))
@@ -26,10 +27,12 @@ class CardView: UIView {
     
     @objc private func panCardView(gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: self)
+        guard  let view = gesture.view else { return }
+        
         if gesture.state == .changed {
             self.handlePanChange(translation: translation)
         } else if  gesture.state == .ended {
-            self.handleEnded()
+            self.handlePanEnded(view: view, translation: translation)
         }
         
     }
@@ -63,22 +66,33 @@ class CardView: UIView {
         
     }
     
-    private func handleEnded() {
-        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.7, options: []) {
-            self.transform = .identity
-            self.layoutIfNeeded()
-            self.goodLabel.alpha = 0
-            self.nopeLabel.alpha = 0
+    private func handlePanEnded(view: UIView, translation: CGPoint) {
+        
+        if translation.x <= -120 {
+            view.removeCardViewAnimation(x: -600)
+            
+        } else if translation.x >= 120 {
+            view.removeCardViewAnimation(x: 600)
+
+        } else {
+            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.7, options: []) {
+                self.transform = .identity
+                self.layoutIfNeeded()
+                self.goodLabel.alpha = 0
+                self.nopeLabel.alpha = 0
+            }
         }
+        
     }
     
-    private func setUpLayout() {
+    private func setUpLayout(user: User) {
         let infoVerticalStackView = UIStackView(arrangedSubviews: [residenceLabel, hobbyLabel, introductionLabel])
         infoVerticalStackView.axis = .vertical
         
         let baseStackView = UIStackView(arrangedSubviews: [infoVerticalStackView, infoButton])
         baseStackView.axis = .horizontal
         
+        //Viewの配置を作成
         addSubview(cardImageView)
         addSubview(nameLabel)
         addSubview(baseStackView)
@@ -91,6 +105,11 @@ class CardView: UIView {
         nameLabel.anchor(bottom: baseStackView.topAnchor, left: cardImageView.leftAnchor, bottomPadding: 10, leftPadding: 20)
         goodLabel.anchor(top: cardImageView.topAnchor, left: cardImageView.leftAnchor, width: 140, height: 55, topPadding: 25, leftPadding: 20)
         nopeLabel.anchor(top: cardImageView.topAnchor, right: cardImageView.rightAnchor, width: 140, height: 55, topPadding: 25, rightPadding: 20)
+        
+        //ユーザー情報をViewに反映
+        nameLabel.text = user.name
+        introductionLabel.text = user.email
+        
     }
     
     required init?(coder: NSCoder) {
