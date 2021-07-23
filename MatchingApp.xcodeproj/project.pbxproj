@@ -27,6 +27,9 @@
 		0261659A2697BC5B0077C244 /* UIView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026165992697BC5B0077C244 /* UIView-Extension.swift */; };
 		0261659C269824C20077C244 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261659B269824C20077C244 /* CardView.swift */; };
 		0261659E269974CA0077C244 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0261659D269974CA0077C244 /* UIColor-Extension.swift */; };
+		027617FC26AA764D00112F68 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027617FB26AA764D00112F68 /* ProfileViewController.swift */; };
+		027617FF26AA7B7000112F68 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027617FE26AA7B7000112F68 /* ProfileImageView.swift */; };
+		0276180126AA7C8500112F68 /* ProfileLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0276180026AA7C8500112F68 /* ProfileLabel.swift */; };
 		02E816C8269F8CFF00B4096C /* RegisterTiitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E816C7269F8CFF00B4096C /* RegisterTiitleLabel.swift */; };
 		02E816CA269F90A800B4096C /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E816C9269F90A800B4096C /* RegisterButton.swift */; };
 		02E8171D26A0E1F600B4096C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8171C26A0E1F600B4096C /* RegisterViewModel.swift */; };
@@ -57,6 +60,9 @@
 		026165992697BC5B0077C244 /* UIView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extension.swift"; sourceTree = "<group>"; };
 		0261659B269824C20077C244 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0261659D269974CA0077C244 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		027617FB26AA764D00112F68 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		027617FE26AA7B7000112F68 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		0276180026AA7C8500112F68 /* ProfileLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLabel.swift; sourceTree = "<group>"; };
 		02E816C7269F8CFF00B4096C /* RegisterTiitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTiitleLabel.swift; sourceTree = "<group>"; };
 		02E816C9269F90A800B4096C /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
 		02E8171C26A0E1F600B4096C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -148,6 +154,7 @@
 				02616579269451870077C244 /* HomeViewController.swift */,
 				02057A9D269E3B0A00F66115 /* RegisterViewController.swift */,
 				02E8172426A59CD300B4096C /* LoginViewController.swift */,
+				027617FB26AA764D00112F68 /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -155,6 +162,7 @@
 		0261658A269500950077C244 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				027617FD26AA7B5A00112F68 /* Profile */,
 				02057AA0269E40DB00F66115 /* Register */,
 				02057A9F269E40C100F66115 /* Home */,
 			);
@@ -171,6 +179,15 @@
 				02E8172226A45FCF00B4096C /* Firebase-Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		027617FD26AA7B5A00112F68 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				027617FE26AA7B7000112F68 /* ProfileImageView.swift */,
+				0276180026AA7C8500112F68 /* ProfileLabel.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		02E816C6269F206C00B4096C /* GoogleService-Info-DEVELOP */ = {
@@ -354,8 +371,11 @@
 				0261658C269500BC0077C244 /* BottomContollView.swift in Sources */,
 				02616578269451870077C244 /* SceneDelegate.swift in Sources */,
 				0261659C269824C20077C244 /* CardView.swift in Sources */,
+				027617FF26AA7B7000112F68 /* ProfileImageView.swift in Sources */,
+				0276180126AA7C8500112F68 /* ProfileLabel.swift in Sources */,
 				02057AA2269E40F500F66115 /* RegisterTextField.swift in Sources */,
 				02057A9E269E3B0A00F66115 /* RegisterViewController.swift in Sources */,
+				027617FC26AA764D00112F68 /* ProfileViewController.swift in Sources */,
 				02057A96269BA4D600F66115 /* CardImageView.swift in Sources */,
 				0261658E2696A6B50077C244 /* UIImage-Extension.swift in Sources */,
 			);
