@@ -30,6 +30,8 @@
 		027617FC26AA764D00112F68 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027617FB26AA764D00112F68 /* ProfileViewController.swift */; };
 		027617FF26AA7B7000112F68 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027617FE26AA7B7000112F68 /* ProfileImageView.swift */; };
 		0276180126AA7C8500112F68 /* ProfileLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0276180026AA7C8500112F68 /* ProfileLabel.swift */; };
+		028BDA0226AB8C9700EB2C6A /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028BDA0126AB8C9700EB2C6A /* ProfileTextField.swift */; };
+		028BDA0526AB93FF00EB2C6A /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028BDA0426AB93FF00EB2C6A /* InfoCollectionViewCell.swift */; };
 		02E816C8269F8CFF00B4096C /* RegisterTiitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E816C7269F8CFF00B4096C /* RegisterTiitleLabel.swift */; };
 		02E816CA269F90A800B4096C /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E816C9269F90A800B4096C /* RegisterButton.swift */; };
 		02E8171D26A0E1F600B4096C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8171C26A0E1F600B4096C /* RegisterViewModel.swift */; };
@@ -63,6 +65,8 @@
 		027617FB26AA764D00112F68 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		027617FE26AA7B7000112F68 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		0276180026AA7C8500112F68 /* ProfileLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLabel.swift; sourceTree = "<group>"; };
+		028BDA0126AB8C9700EB2C6A /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
+		028BDA0426AB93FF00EB2C6A /* InfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		02E816C7269F8CFF00B4096C /* RegisterTiitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTiitleLabel.swift; sourceTree = "<group>"; };
 		02E816C9269F90A800B4096C /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
 		02E8171C26A0E1F600B4096C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 		02616574269451870077C244 /* MatchingApp */ = {
 			isa = PBXGroup;
 			children = (
+				028BDA0326AB93B800EB2C6A /* Cells */,
 				02E8172926A6F15600B4096C /* Models */,
 				0261658F2696A6C40077C244 /* Extensions */,
 				0261658A269500950077C244 /* Views */,
@@ -186,8 +191,17 @@
 			children = (
 				027617FE26AA7B7000112F68 /* ProfileImageView.swift */,
 				0276180026AA7C8500112F68 /* ProfileLabel.swift */,
+				028BDA0126AB8C9700EB2C6A /* ProfileTextField.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		028BDA0326AB93B800EB2C6A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				028BDA0426AB93FF00EB2C6A /* InfoCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		02E816C6269F206C00B4096C /* GoogleService-Info-DEVELOP */ = {
@@ -355,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028BDA0526AB93FF00EB2C6A /* InfoCollectionViewCell.swift in Sources */,
 				02E816CA269F90A800B4096C /* RegisterButton.swift in Sources */,
 				026165912697A1C40077C244 /* TopControlView.swift in Sources */,
 				0261657A269451870077C244 /* HomeViewController.swift in Sources */,
@@ -366,6 +381,7 @@
 				02E8172B26A6F17000B4096C /* User.swift in Sources */,
 				0261659E269974CA0077C244 /* UIColor-Extension.swift in Sources */,
 				02E8172326A45FCF00B4096C /* Firebase-Extension.swift in Sources */,
+				028BDA0226AB8C9700EB2C6A /* ProfileTextField.swift in Sources */,
 				02057A94269BA3F900F66115 /* UIButton-Extension.swift in Sources */,
 				02E8171D26A0E1F600B4096C /* RegisterViewModel.swift in Sources */,
 				0261658C269500BC0077C244 /* BottomContollView.swift in Sources */,
