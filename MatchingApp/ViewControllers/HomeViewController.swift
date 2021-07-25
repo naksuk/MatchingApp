@@ -7,7 +7,6 @@ import RxSwift
 
 class HomeViewController: UIViewController {
     
-    
     private var user: User?
     private var users = [User]()
     private let disposedBag = DisposeBag()
@@ -35,7 +34,6 @@ class HomeViewController: UIViewController {
         Firestore.fetchUserFromFirestore(uid: uid) { (user) in
             if let user = user {
                 self.user = user
-                
             }
         }
         
@@ -67,8 +65,6 @@ class HomeViewController: UIViewController {
                 card.anchor(top: self.cardView.topAnchor, bottom: self.cardView.bottomAnchor, left: self.cardView.leftAnchor, right: self.cardView.rightAnchor)
                  
             }
-            
-            
             print("ユーザー情報の取得に成功")
         }
     }
