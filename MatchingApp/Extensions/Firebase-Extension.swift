@@ -100,10 +100,44 @@ extension Firestore {
                 return
             }
             completion()
-            print("ユーザ除法の更新に成功")
-            
+            print("ユーザ情報の更新に成功")
         }
         
     }
+    
+}
+
+
+// MARK: -Storage
+extension Storage {
+    
+    //ユーザーの情報をFireStorageに保存
+    static func addProfileImageToStorage(image: UIImage, dic: [String: Any], completion: @escaping () -> Void) {
+        
+        guard let uploadImage = image.jpegData(compressionQuality: 0.3) else { return }
+        let filename = NSUUID().uuidString
+        let storageRef = Storage.storage().reference().child("profile_image").child(filename)
+        
+        storageRef.putData(uploadImage, metadata: nil) { (metadata, err) in
+            
+            if let err = err {
+                print("画像の保存に失敗しました。：", err)
+                return
+            }
+            storageRef.downloadURL { (url, err) in
+                if let err = err {
+                    print("画像の取得に失敗しました。")
+                }
+                guard let urlString = url?.absoluteString else { return }
+                var dicWithImage = dic
+                dicWithImage["profileImageUrl"] = urlString
+                Firestore.updateUserInfo(dic: dicWithImage) {
+                    completion()
+                }
+            }
+            print("画像の保存に成功しました。")
+        }
+    }
+    
     
 }
