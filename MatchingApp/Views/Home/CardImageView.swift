@@ -4,10 +4,9 @@ class CardImageView: UIImageView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .blue
+        backgroundColor = .gray
         layer.cornerRadius = 10
         contentMode = .scaleToFill
-        image = UIImage(named: "test-image")
         clipsToBounds = true
     }
     

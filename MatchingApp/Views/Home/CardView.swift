@@ -109,6 +109,9 @@ class CardView: UIView {
         //ユーザー情報をViewに反映
         nameLabel.text = user.name
         introductionLabel.text = user.email
+        if let url = URL(string: user.profileImageUrl ?? "") {
+            cardImageView.sd_setImage(with: url)
+        }
         
     }
     
