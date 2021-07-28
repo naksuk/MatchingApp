@@ -43,6 +43,7 @@ extension Firestore {
         guard let name = name else { return }
         
         let document = [
+            "uid": uid,
             "name": name,
             "email": email,
             "createdAt": Timestamp()
@@ -86,7 +87,14 @@ extension Firestore {
                 return user
             })
             
-            completion(users ?? [User]())
+            let filteredUsers = users?.filter({ (user) -> Bool in
+                if user.uid == Auth.auth().currentUser?.uid {
+                    print(user.uid)
+                }
+                return user.uid != Auth.auth().currentUser?.uid
+            })
+            
+            completion(filteredUsers ?? [User]())
             
         }
     }

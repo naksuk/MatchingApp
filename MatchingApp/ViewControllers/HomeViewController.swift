@@ -8,6 +8,7 @@ import RxSwift
 class HomeViewController: UIViewController {
     
     private var user: User?
+    private var isCardAnimating = false
     private var users = [User]()
     private let disposedBag = DisposeBag()
     
@@ -48,15 +49,14 @@ class HomeViewController: UIViewController {
     
     private func fetchUsers() {
         HUD.show(.progress)
+        self.users = []
         Firestore.fetchUsersFromFirestore { (users) in
             HUD.hide()
             self.users = users
-            
             self.users.forEach { (user) in
                 let card = CardView(user: user)
                 self.cardView.addSubview(card)
                 card.anchor(top: self.cardView.topAnchor, bottom: self.cardView.bottomAnchor, left: self.cardView.leftAnchor, right: self.cardView.rightAnchor)
-                 
             }
             print("ユーザー情報の取得に成功")
         }
@@ -99,6 +99,42 @@ class HomeViewController: UIViewController {
                 self?.present(profile, animated: true, completion: nil)
             }
             .disposed(by: disposedBag)
+        
+        bottomControlView.relaodView.button?.rx.tap
+            .asDriver()
+            .drive { [weak self] _ in
+                self?.fetchUsers()
+            }
+            .disposed(by: disposedBag)
+        
+        bottomControlView.nopeView.button?.rx.tap
+            .asDriver()
+            .drive { [weak self] _ in
+                
+                guard let self = self else { return }
+                if !self.isCardAnimating {
+                    self.isCardAnimating = true
+                    self.cardView.subviews.last?.removeCardViewAnimation(x: -600, completion: {
+                        self.isCardAnimating = false
+                    })
+                }
+            }
+            .disposed(by: disposedBag)
+        
+        bottomControlView.likeView.button?.rx.tap
+            .asDriver()
+            .drive { [weak self] _ in
+                
+                guard let self = self else { return }
+                if !self.isCardAnimating {
+                    self.isCardAnimating = true
+                    self.cardView.subviews.last?.removeCardViewAnimation(x: 600, completion: {
+                        self.isCardAnimating = false
+                    })
+                }
+            }
+            .disposed(by: disposedBag)
+        
     }
 
 }

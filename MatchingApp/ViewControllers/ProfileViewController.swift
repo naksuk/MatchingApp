@@ -53,6 +53,7 @@ class ProfileViewController: UIViewController {
             .drive { [weak self] _ in
                 guard let self = self else { return }
                 let dic = [
+                    "uid": Auth.auth().currentUser?.uid,
                     "name": self.name,
                     "age": self.age,
                     "email": self.email,
