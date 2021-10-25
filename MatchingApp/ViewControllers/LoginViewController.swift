@@ -8,7 +8,7 @@ class LoginViewController: UIViewController {
     private let disposedBag = DisposeBag()
     
     //MARK: UIViews
-    private let titleLabel = RegisterTitleLabel(text: "Login")
+    private let titleLabel = RegisterTitleLabel(text: "Kender")
     private let emailTextField = RegisterTextField(placeHolder: "email")
     private let passwordTextField = RegisterTextField(placeHolder: "password")
     private let loginButton = RegisterButton(text: "ログイン")
@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
         setupGradientLayer()
         setupLayout()
         setupBindings()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tapGesture)
     }
     
     private func setupGradientLayer() {
@@ -31,6 +33,10 @@ class LoginViewController: UIViewController {
         view.layer.frame = view.bounds
         view.layer.addSublayer(layer)
 
+    }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
     
     private func setupLayout() {

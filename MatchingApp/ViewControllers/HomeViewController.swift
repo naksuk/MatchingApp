@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
         Firestore.fetchUserFromFirestore(uid: uid) { (user) in
             if let user = user {
                 self.user = user
+                print(user.name)
             }
         }
         fetchUsers()
@@ -61,6 +62,7 @@ class HomeViewController: UIViewController {
             print("ユーザー情報の取得に成功")
         }
     }
+
     
     private func setupLayout() {
         
@@ -82,11 +84,8 @@ class HomeViewController: UIViewController {
             stackView.leftAnchor.constraint(equalTo: view.leftAnchor),
             stackView.rightAnchor.constraint(equalTo: view.rightAnchor)]
             .forEach { $0.isActive = true }
-
-
     }
     
-
     
     private func setupBindings() {
         
@@ -110,7 +109,6 @@ class HomeViewController: UIViewController {
         bottomControlView.nopeView.button?.rx.tap
             .asDriver()
             .drive { [weak self] _ in
-                
                 guard let self = self else { return }
                 if !self.isCardAnimating {
                     self.isCardAnimating = true
@@ -134,7 +132,6 @@ class HomeViewController: UIViewController {
                 }
             }
             .disposed(by: disposedBag)
-        
     }
 
 }

@@ -75,7 +75,7 @@ extension Firestore {
     
     //Firestoreから自分以外のユーザー情報を取得
     static func fetchUsersFromFirestore(completion: @escaping ([User]) -> Void) {
-        Firestore.firestore().collection("users").getDocuments { (snapshots, err) in
+        Firestore.firestore().collection("users").order(by: "a", descending: true).getDocuments { (snapshots, err) in
             if let err = err {
                 print("ユーザ情報の取得に失敗: ", err)
                 return
@@ -84,6 +84,7 @@ extension Firestore {
             let users = snapshots?.documents.map({ (snapshot) -> User in
                 let dic = snapshot.data()
                 let user = User(dic: dic)
+                print(dic)
                 return user
             })
             

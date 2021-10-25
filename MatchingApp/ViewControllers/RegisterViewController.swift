@@ -10,7 +10,7 @@ class RegisterViewController: UIViewController {
     private let viewModel = RegisterViewModel()
     
     //MARK: UIViews
-    private let titleLabel = RegisterTitleLabel(text: "Tinder")
+    private let titleLabel = RegisterTitleLabel(text: "Kender")
     private let nameTextField = RegisterTextField(placeHolder: "名前")
     private let emailTextField = RegisterTextField(placeHolder: "email")
     private let passwordTextField = RegisterTextField(placeHolder: "password")

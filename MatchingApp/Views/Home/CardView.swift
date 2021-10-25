@@ -7,6 +7,7 @@ class CardView: UIView {
     //MARK: UIViews
     private let cardImageView = CardImageView(frame: .zero)
     private let nameLabel: UILabel = CardInfoLabel(font: .systemFont(ofSize: 40, weight: .heavy))
+    private let ageLabel: UILabel  = CardInfoLabel(font: .systemFont(ofSize: 28, weight: .regular))
     private let infoButton = UIButton(type: .system).createCardInfoButton()
     private let residenceLabel = CardInfoLabel(font: .systemFont(ofSize: 20, weight: .regular))
     private let hobbyLabel = CardInfoLabel(font: .systemFont(ofSize: 25, weight: .regular))
@@ -95,6 +96,7 @@ class CardView: UIView {
         //Viewの配置を作成
         addSubview(cardImageView)
         addSubview(nameLabel)
+        //addSubview(ageLabel)
         addSubview(baseStackView)
         addSubview(goodLabel)
         addSubview(nopeLabel)
@@ -103,11 +105,13 @@ class CardView: UIView {
         infoButton.anchor(width: 40)
         baseStackView.anchor(bottom: cardImageView.bottomAnchor, left: cardImageView.leftAnchor, right: cardImageView.rightAnchor, bottomPadding: 20, leftPadding: 20, rightPadding: 20)
         nameLabel.anchor(bottom: baseStackView.topAnchor, left: cardImageView.leftAnchor, bottomPadding: 10, leftPadding: 20)
+        //ageLabel.anchor(bottom: baseStackView.topAnchor, left: nameLabel.rightAnchor, bottomPadding: 10, leftPadding: 10)
         goodLabel.anchor(top: cardImageView.topAnchor, left: cardImageView.leftAnchor, width: 140, height: 55, topPadding: 25, leftPadding: 20)
         nopeLabel.anchor(top: cardImageView.topAnchor, right: cardImageView.rightAnchor, width: 140, height: 55, topPadding: 25, rightPadding: 20)
         
         //ユーザー情報をViewに反映
         nameLabel.text = user.name
+        ageLabel.text = "\(user.age)"
         introductionLabel.text = user.introduciton
         hobbyLabel.text = user.hobby
         residenceLabel.text = user.residence

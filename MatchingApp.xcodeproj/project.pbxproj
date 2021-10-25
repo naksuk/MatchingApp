@@ -32,6 +32,7 @@
 		0276180126AA7C8500112F68 /* ProfileLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0276180026AA7C8500112F68 /* ProfileLabel.swift */; };
 		028BDA0226AB8C9700EB2C6A /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028BDA0126AB8C9700EB2C6A /* ProfileTextField.swift */; };
 		028BDA0526AB93FF00EB2C6A /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028BDA0426AB93FF00EB2C6A /* InfoCollectionViewCell.swift */; };
+		0293724A2726ED04003BCC19 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029372492726ED04003BCC19 /* Store.swift */; };
 		0295169226B00BAA0064FFC0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0295169126B00BAA0064FFC0 /* SDWebImage */; };
 		02E816C8269F8CFF00B4096C /* RegisterTiitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E816C7269F8CFF00B4096C /* RegisterTiitleLabel.swift */; };
 		02E816CA269F90A800B4096C /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E816C9269F90A800B4096C /* RegisterButton.swift */; };
@@ -68,6 +69,7 @@
 		0276180026AA7C8500112F68 /* ProfileLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLabel.swift; sourceTree = "<group>"; };
 		028BDA0126AB8C9700EB2C6A /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
 		028BDA0426AB93FF00EB2C6A /* InfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		029372492726ED04003BCC19 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		02E816C7269F8CFF00B4096C /* RegisterTiitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTiitleLabel.swift; sourceTree = "<group>"; };
 		02E816C9269F90A800B4096C /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
 		02E8171C26A0E1F600B4096C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				02E8172A26A6F17000B4096C /* User.swift */,
+				029372492726ED04003BCC19 /* Store.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				02057A92269B9A1F00F66115 /* CardInfoLabel.swift in Sources */,
 				02E8172526A59CD300B4096C /* LoginViewController.swift in Sources */,
 				02616576269451870077C244 /* AppDelegate.swift in Sources */,
+				0293724A2726ED04003BCC19 /* Store.swift in Sources */,
 				02E816C8269F8CFF00B4096C /* RegisterTiitleLabel.swift in Sources */,
 				0261659A2697BC5B0077C244 /* UIView-Extension.swift in Sources */,
 				02E8172B26A6F17000B4096C /* User.swift in Sources */,
