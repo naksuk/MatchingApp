@@ -10,6 +10,7 @@ class HomeViewController: UIViewController {
     private var user: User?
     private var isCardAnimating = false
     private var users = [User]()
+    private var stores = [Store]()
     private let disposedBag = DisposeBag()
     
     let topControlView = TopControlView()
@@ -30,7 +31,6 @@ class HomeViewController: UIViewController {
         Firestore.fetchUserFromFirestore(uid: uid) { (user) in
             if let user = user {
                 self.user = user
-                print(user.name)
             }
         }
         fetchUsers()
@@ -51,21 +51,39 @@ class HomeViewController: UIViewController {
     private func fetchUsers() {
         HUD.show(.progress)
         self.users = []
-        Firestore.fetchUsersFromFirestore { (users) in
-            HUD.hide()
-            self.users = users
-            self.users.forEach { (user) in
-                let card = CardView(user: user)
-                self.cardView.addSubview(card)
-                card.anchor(top: self.cardView.topAnchor, bottom: self.cardView.bottomAnchor, left: self.cardView.leftAnchor, right: self.cardView.rightAnchor)
-            }
-            print("ユーザー情報の取得に成功")
+        testRestaurantAppFunc()
+//        Firestore.fetchUsersFromFirestore { (users) in
+//            HUD.hide()
+//            self.users = users
+//            self.users.forEach { (user) in
+//                let card = CardView(user: user)
+//                self.cardView.addSubview(card)
+//                card.anchor(top: self.cardView.topAnchor, bottom: self.cardView.bottomAnchor, left: self.cardView.leftAnchor, right: self.cardView.rightAnchor)
+//            }
+//            print("ユーザー情報の取得に成功")
+//        }
+    }
+    
+    private func testRestaurantAppFunc() {
+        let i = [1, 2]//, 3, 4, 5, 6, 7, 8, 9, 10]
+        var images = [UIImage]()
+        i.forEach { c in
+            images.append(UIImage(named: "\(c)")!)
         }
+        let dic = [
+            "images": images
+        ]
+        self.stores.append(Store(dic: dic))
+        self.stores.forEach { (store) in
+            let card = StoreCardView(store: store)
+            self.cardView.addSubview(card)
+            card.anchor(top: self.cardView.topAnchor, bottom: self.cardView.bottomAnchor, left: self.cardView.leftAnchor, right: self.cardView.rightAnchor)
+        }
+        HUD.hide()
     }
 
     
     private func setupLayout() {
-        
         view.backgroundColor = .white
         
         let stackView = UIStackView(arrangedSubviews: [topControlView, cardView, bottomControlView])

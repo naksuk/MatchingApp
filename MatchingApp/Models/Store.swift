@@ -4,11 +4,11 @@ import UIKit
 class Store {
     
     var name: String
-    var image: UIImage
+    var images: [UIImage]
     
     init(dic: [String: Any]) {
-        self.name = dic["name"] as? String ?? ""
-        self.image = dic["image"] as! UIImage
+        self.name = dic["name"] as? String ?? "サンプル店"
+        self.images = dic["images"] as? [UIImage] ?? [UIImage]()
     }
     
 }
