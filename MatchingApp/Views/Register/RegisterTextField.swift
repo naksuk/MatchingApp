@@ -14,7 +14,4 @@ class RegisterTextField: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
     
-
-    
-    
 }

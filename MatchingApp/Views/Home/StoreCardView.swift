@@ -1,6 +1,7 @@
 import UIKit
 
-class CardView: UIView {
+//店舗写真バージョン
+class StoreCardView: UIView {
     
     private let gradientLayer = CAGradientLayer()
     
@@ -15,27 +16,37 @@ class CardView: UIView {
     private let goodLabel: UILabel = CardInfoLabel(text: "GOOD", textColor: .rgb(red: 137, green: 223, blue: 86))
     private let nopeLabel: UILabel = CardInfoLabel(text: "NOPE", textColor: .rgb(red: 222, green: 110, blue: 110))
     
+    private var pageIndex = 0
+    private var store: Store?
     
-    init(user: User) {
+    init(store: Store) {
         super.init(frame: .zero)
-        
-        setUpLayout(user: user)
+        setUpLayout(store: store)
         setupGradientLayer()
+        self.store = store
         
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panCardView))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapCardView))
+        
+        tapGesture.numberOfTapsRequired = 1
+        
         self.addGestureRecognizer(panGesture)
+        self.addGestureRecognizer(tapGesture)
     }
     
     @objc private func panCardView(gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: self)
         guard  let view = gesture.view else { return }
-        
         if gesture.state == .changed {
             self.handlePanChange(translation: translation)
         } else if  gesture.state == .ended {
             self.handlePanEnded(view: view, translation: translation)
         }
-        
+    }
+    
+    @objc private func tapCardView(gesture: UITapGestureRecognizer) {
+        let tapPoint = gesture.location(in: self)
+        recognizeTapPoint(tapPoint: tapPoint)
     }
     
     private func setupGradientLayer() {
@@ -86,7 +97,22 @@ class CardView: UIView {
         
     }
     
-    private func setUpLayout(user: User) {
+    private func recognizeTapPoint(tapPoint: CGPoint) {
+        let halfViewlLength = self.frame.width / 2
+        if tapPoint.x <= halfViewlLength {
+            if pageIndex != 0 {
+                pageIndex -= 1
+                cardImageView.image = store?.images[pageIndex]
+            }
+        } else if tapPoint.x >= halfViewlLength {
+            if pageIndex < (store?.images.count)! - 1 {
+                pageIndex += 1
+                cardImageView.image = store?.images[pageIndex]
+            }
+        }
+    }
+    
+    private func setUpLayout(store: Store) {
         let infoVerticalStackView = UIStackView(arrangedSubviews: [residenceLabel, hobbyLabel, introductionLabel])
         infoVerticalStackView.axis = .vertical
         
@@ -109,17 +135,8 @@ class CardView: UIView {
         goodLabel.anchor(top: cardImageView.topAnchor, left: cardImageView.leftAnchor, width: 140, height: 55, topPadding: 25, leftPadding: 20)
         nopeLabel.anchor(top: cardImageView.topAnchor, right: cardImageView.rightAnchor, width: 140, height: 55, topPadding: 25, rightPadding: 20)
         
-        //ユーザー情報をViewに反映
-        nameLabel.text = user.name
-        ageLabel.text = "\(user.age)"
-        introductionLabel.text = user.introduciton
-        hobbyLabel.text = user.hobby
-        residenceLabel.text = user.residence
-        
-        if let url = URL(string: user.profileImageUrl ?? "") {
-            cardImageView.sd_setImage(with: url)
-        }
-        
+        nameLabel.text = store.name
+        cardImageView.image = store.images[0]
     }
     
     required init?(coder: NSCoder) {

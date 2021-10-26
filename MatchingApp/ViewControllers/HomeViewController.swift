@@ -10,6 +10,7 @@ class HomeViewController: UIViewController {
     private var user: User?
     private var isCardAnimating = false
     private var users = [User]()
+    private var stores = [Store]()
     private let disposedBag = DisposeBag()
     
     let topControlView = TopControlView()
@@ -32,7 +33,7 @@ class HomeViewController: UIViewController {
                 self.user = user
             }
         }
-        fetchUsers()
+        fetchData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -45,8 +46,12 @@ class HomeViewController: UIViewController {
         }
     }
     
-    // MARK: Methods
+    private func fetchData() {
+        //fetchUsers()
+        fetchStores()
+    }
     
+    // MARK: Methods
     private func fetchUsers() {
         HUD.show(.progress)
         self.users = []
@@ -62,8 +67,26 @@ class HomeViewController: UIViewController {
         }
     }
     
+    private func fetchStores() {
+        HUD.show(.progress)
+        self.stores.removeAll()
+        var storeNo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        storeNo.sort {$1 < $0}
+        storeNo.forEach { i in
+            let storeImage = [UIImage(named: "\(i)a"), UIImage(named: "\(i)b"), UIImage(named: "\(i)c")]
+            let dic = [ "images": storeImage]
+            self.stores.append(Store(dic: dic))
+        }
+        self.stores.forEach { (store) in
+            let card = StoreCardView(store: store)
+            self.cardView.addSubview(card)
+            card.anchor(top: self.cardView.topAnchor, bottom: self.cardView.bottomAnchor, left: self.cardView.leftAnchor, right: self.cardView.rightAnchor)
+        }
+        HUD.hide()
+    }
+
+    
     private func setupLayout() {
-        
         view.backgroundColor = .white
         
         let stackView = UIStackView(arrangedSubviews: [topControlView, cardView, bottomControlView])
@@ -82,11 +105,8 @@ class HomeViewController: UIViewController {
             stackView.leftAnchor.constraint(equalTo: view.leftAnchor),
             stackView.rightAnchor.constraint(equalTo: view.rightAnchor)]
             .forEach { $0.isActive = true }
-
-
     }
     
-
     
     private func setupBindings() {
         
@@ -103,14 +123,13 @@ class HomeViewController: UIViewController {
         bottomControlView.relaodView.button?.rx.tap
             .asDriver()
             .drive { [weak self] _ in
-                self?.fetchUsers()
+                self?.fetchData()
             }
             .disposed(by: disposedBag)
         
         bottomControlView.nopeView.button?.rx.tap
             .asDriver()
             .drive { [weak self] _ in
-                
                 guard let self = self else { return }
                 if !self.isCardAnimating {
                     self.isCardAnimating = true
@@ -134,7 +153,6 @@ class HomeViewController: UIViewController {
                 }
             }
             .disposed(by: disposedBag)
-        
     }
 
 }

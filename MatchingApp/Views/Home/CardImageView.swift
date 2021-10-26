@@ -6,7 +6,7 @@ class CardImageView: UIImageView {
         super.init(frame: frame)
         backgroundColor = .gray
         layer.cornerRadius = 10
-        contentMode = .scaleToFill
+        contentMode = .scaleAspectFill
         clipsToBounds = true
     }
     
